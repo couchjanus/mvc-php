@@ -1,9 +1,11 @@
 <?php
+require_once CORE.'/Controller.php';
 
-class AboutController
+class AboutController extends Controller
 {
     public function index()
     {
-        echo "About Page";
+        $title = "About Page";
+        $this->view->render('about/index', compact('title'));
     }
 }

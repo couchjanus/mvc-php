@@ -1,9 +1,12 @@
 <?php
+require_once CORE.'/View.php';
 
 class HomeController
 {
     public function index()
     {
-        echo "Home Page";
+        $title = "Home Page";
+        $view = new View();
+        $view->render('home/index', compact('title'));
     }
 }
